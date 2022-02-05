@@ -1,27 +1,12 @@
 {
-  "root": true,
-  "plugins": ["prettier", "react", "@typescript-eslint"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-var-requires": 0
-  },
+  "extends": ["../../.eslintrc", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    }
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "parser": "@typescript-eslint/parser"
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0
+  }
 }
